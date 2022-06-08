@@ -1,269 +1,179 @@
-3_Spinning_Stars.mp4 <- 3_Spinning_Stars.mp4
-   - Keywords: Science, Astronomy, Stars, Magnetism, Fields, Convection, Envelope, Greg Foss
+3_Spinning_Stars.mp4 <- 3_Spinning_Stars.mp4, Science, Astronomy, Stars, Magnetism, Fields, Convection, Envelope, Greg Foss
 
-3_Spinning_Stars.desc <- Star Magnetic Field.png
-   - Keywords: Science, Astronomy, Stars, Magnetism, Fields
+3_Spinning_Stars.desc <- Star Magnetic Field.png, Science, Astronomy, Stars, Magnetism, Fields
 
-RUND_Aircraft_Surface_Currents.avi <- 10G_4096.avi
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Aircraft_Surface_Currents.avi <- 10G_4096.avi, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Aircraft_Surface_Currents.desc <- caption.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Aircraft_Surface_Currents.desc <- caption.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Color_Bar.png <- colorbar2.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Color_Bar.png <- colorbar2.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0000.desc <- crop0000.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0000.desc <- crop0000.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0090.desc <- crop0090.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0090.desc <- crop0090.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0180.desc <- crop0180.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0180.desc <- crop0180.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0220.desc <- crop0220.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0220.desc <- crop0220.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0265.desc <- crop0265.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0265.desc <- crop0265.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0310.desc <- crop0310.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0310.desc <- crop0310.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crop0400.desc <- crop0400.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crop0400.desc <- crop0400.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Crs0675.desc <- crs0675.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Crs0675.desc <- crs0675.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Fine0675.desc <- fine0675.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Fine0675.desc <- fine0675.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Interlaboratory_Comparison_1.desc <- figs-1.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Interlaboratory_Comparison_1.desc <- figs-1.png, Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Interlaboratory_Comparison_2.desc <- figs-2.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Interlaboratory_Comparison_2.desc <- figs-2.png, Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Interlaboratory_Comparison_3.desc <- figs-3.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Interlaboratory_Comparison_3.desc <- figs-3.png, Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Interlaboratory_Comparison_4.desc <- figs-4.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Interlaboratory_Comparison_4.desc <- figs-4.png, Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Interlaboratory_Comparison_5.desc <- figs-5.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Interlaboratory_Comparison_5.desc <- figs-5.png, Science, Aerospace, Aeronautics, Dynamics, Interlaboratory Comparison, RCS ranges at FOA Defence Research Establishment and Saab Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-Spacecraft_Trajectory.pyr <- 402-allnodes-01.png.pyr
-   - Keywords: Science, Spacecraft, Astronautics, Asteroids, Graph, Trajectories, Spacecraft
+Spacecraft_Trajectory.pyr <- 402-allnodes-01.png.pyr, Science, Spacecraft, Astronautics, Asteroids, Graph, Trajectories, Spacecraft
 
-Spacecraft_Trajectory.desc <- Space Craft Trajectory.png
-   - Keywords: Science, Spacecraft, Astronautics, Asteroids, Graph, Trajectories, Spacecraft
+Spacecraft_Trajectory.desc <- Space Craft Trajectory.png, Science, Spacecraft, Astronautics, Asteroids, Graph, Trajectories, Spacecraft
 
-Asteroid_Ocean_Impacts.mp4 <- Abram_SC16_asteroid.mp4
-   - Keywords: Analysis, Threats, Asteroid, Ocean, Impacts
+Asteroid_Ocean_Impacts.mp4 <- Abram_SC16_asteroid.mp4, Analysis, Threats, Asteroid, Ocean, Impacts
 
-Adult_Mouse_Sternomastoid.avi <- Adult Mouse Sternomastoid Muscle SEM.avi
-   - Keywords: Cellular Biology, Molecular Biology, Electron, Microscope, Muscle
+Adult_Mouse_Sternomastoid.avi <- Adult Mouse Sternomastoid Muscle SEM.avi, Cellular Biology, Molecular Biology, Electron, Microscope, Muscle
 
-Adult_Mouse_Sternomastoid.desc <- Adult_Mouse_Gallery.png
-   - Keywords: Cellular Biology, Molecular Biology, Electron, Microscope, Muscle
+Adult_Mouse_Sternomastoid.desc <- Adult_Mouse_Gallery.png, Cellular Biology, Molecular Biology, Electron, Microscope, Muscle
 
-Cosmic_Web_Dark_Matter.pyr <- Anson_purple.jpg.pyr
-   - Keywords: Dark Matter, Cosmic Web, Astronomy, Anson D'Aloisio, Paul Shapiro
+Cosmic_Web_Dark_Matter.pyr <- Anson_purple.jpg.pyr, Dark Matter, Cosmic Web, Astronomy, Anson D'Aloisio, Paul Shapiro
 
-Cosmic_Web_Dark_Matter.desc <- AnsonCaptionUpdated.jpg
-   - Keywords: Dark Matter, Cosmic Web, Astronomy, Anson D'Aloisio, Paul Shapiro
+Cosmic_Web_Dark_Matter.desc <- AnsonCaptionUpdated.jpg, Dark Matter, Cosmic Web, Astronomy, Anson D'Aloisio, Paul Shapiro
 
-Arctic_Ocean_Interactions_Original.mp4 <- arctic040119.mp4
-   - Keywords: Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
+Arctic_Ocean_Interactions_Original.mp4 <- arctic040119.mp4, Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
 
-Arctic_Ocean_Interactions.desc <- ArcticCaption.jpg
-   - Keywords: Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
+Arctic_Ocean_Interactions.desc <- ArcticCaption.jpg, Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
 
-Arctic_Ocean_Interactions.jpg <- foss-tacc_arctic-sea-ice.5000x5000.jpg
-   - Keywords: Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
+Arctic_Ocean_Interactions.jpg <- foss-tacc_arctic-sea-ice.5000x5000.jpg, Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
 
-Dance_at_Le_Moulin_de_la_Galette.pyr <- Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg.pyr
-   - Keywords: Pierre-Auguste, Pierre Auguste Renoir, Google Art Project, 1876, District of Montmartre, Paris, Bal du moulin de la Galette
+Dance_at_Le_Moulin_de_la_Galette.pyr <- Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg.pyr, Pierre-Auguste, Pierre Auguste Renoir, Google Art Project, 1876, District of Montmartre, Paris, Bal du moulin de la Galette
 
-Austin_360.pyr <- Austin360.pyr
-   - Keywords: 30th floor, Ricardo Meleschi, Photography, Photographer, Composite, Bridge, Skyline
+Austin_360.pyr <- Austin360.pyr, 30th floor, Ricardo Meleschi, Photography, Photographer, Composite, Bridge, Skyline
 
-Austin_360.desc <- Austin360_caption.png
-   - Keywords: 30th floor, Ricardo Meleschi, Photography, Photographer, Composite, Bridge, Skyline
+Austin_360.desc <- Austin360_caption.png, 30th floor, Ricardo Meleschi, Photography, Photographer, Composite, Bridge, Skyline
 
-Bark_Texture_TACC.jpg <- Bark_TACC_texture.jpg
-   - Keywords: Texas Advanced Computing Center, TACC, Bark Texture, Textured, Logo
+Bark_Texture_TACC.jpg <- Bark_TACC_texture.jpg, Texas Advanced Computing Center, TACC, Bark Texture, Textured, Logo
 
-Carbon_Nano_Battery.mp4 <- knoll-nanosphere740k.mp4
-   - Keywords: KC Lau, Argonne National Laboratory, Visualization, Aaron Knoll, TACC, LAMMPS, Simulation, Simulated, Nanosphere, Anode
+Carbon_Nano_Battery.mp4 <- knoll-nanosphere740k.mp4, KC Lau, Argonne National Laboratory, Visualization, Aaron Knoll, TACC, LAMMPS, Simulation, Simulated, Nanosphere, Anode
 
-Carbon_Nano_Battery.desc <- Battery.png
-   - Keywords: KC Lau, Argonne National Laboratory, Visualization, Aaron Knoll, TACC, LAMMPS, Simulation, Simulated, Nanosphere, Anode
+Carbon_Nano_Battery.desc <- Battery.png, KC Lau, Argonne National Laboratory, Visualization, Aaron Knoll, TACC, LAMMPS, Simulation, Simulated, Nanosphere, Anode
 
-Bee_Caves <- beecaves_anaglyph.jpg.pyr
-   - Keywords: Anaglyph, Caves, 3D
+Bee_Caves <- beecaves_anaglyph.jpg.pyr, Anaglyph, Caves, 3D
 
-Gravitational_Waves.mp4 <- SC_2016_Cosmos1_annotated1.mp4
-   - Keywords: Astronomy, Cosmology, Physics, Black Holes, Merging, Merger, Stephen Hawking, Team, Research, Cambridge, One of the first to use Stampede2, Markus K., Saran T., Pau F., GRCHOMBO, Paul S., Juha J., Cosmos, Carson B., James J., Ingo W., Intel
+Gravitational_Waves.mp4 <- SC_2016_Cosmos1_annotated1.mp4, Astronomy, Cosmology, Physics, Black Holes, Merging, Merger, Stephen Hawking, Team, Research, Cambridge, One of the first to use Stampede2, Markus K., Saran T., Pau F., GRCHOMBO, Paul S., Juha J., Cosmos, Carson B., James J., Ingo W., Intel
 
-Gravitational_Waves.desc <- black_holes_text.jpg
-   - Keywords: Astronomy, Cosmology, Physics, Black Holes, Merging, Merger, Stephen Hawking, Team, Research, Cambridge, One of the first to use Stampede2, Markus K., Saran T., Pau F., GRCHOMBO, Paul S., Juha J., Cosmos, Carson B., James J., Ingo W., Intel
+Gravitational_Waves.desc <- black_holes_text.jpg, Astronomy, Cosmology, Physics, Black Holes, Merging, Merger, Stephen Hawking, Team, Research, Cambridge, One of the first to use Stampede2, Markus K., Saran T., Pau F., GRCHOMBO, Paul S., Juha J., Cosmos, Carson B., James J., Ingo W., Intel
 
-Blue_Spaghetti.png <- BlueSpaghetti.png
-   - Keywords: Water Flow, South Florida, Ground Core Sample Using LB3D prime, Michael Sukop, Sade Garcia, Florida International University, Carson Brownlee, Aaron Knoll, TACC
+Blue_Spaghetti.png <- BlueSpaghetti.png, Water Flow, South Florida, Ground Core Sample Using LB3D prime, Michael Sukop, Sade Garcia, Florida International University, Carson Brownlee, Aaron Knoll, TACC
 
-Blue_Spaghetti.desc <- Blue Spaghetti.png
-   - Keywords: Water Flow, South Florida, Ground Core Sample Using LB3D prime, Michael Sukop, Sade Garcia, Florida International University, Carson Brownlee, Aaron Knoll, TACC
+Blue_Spaghetti.desc <- Blue Spaghetti.png, Water Flow, South Florida, Ground Core Sample Using LB3D prime, Michael Sukop, Sade Garcia, Florida International University, Carson Brownlee, Aaron Knoll, TACC
 
-Brain3.avi <- brain3.avi
-   - Keywords: Brain, Neuroscience, Visualization
+Brain3.avi <- brain3.avi, Brain, Neuroscience, Visualization
 
-Capitol.desc <- Capitol_description.jpg
-   - Keywords: Texas State Capitol Building, Ricardo Meleschi
+Capitol.desc <- Capitol_description.jpg, Texas State Capitol Building, Ricardo Meleschi
 
-Nara_Visual_Archive.pyr <- cnn_embed_6k.jpg.pyr
-   - Keywords: Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
+Nara_Visual_Archive.pyr <- cnn_embed_6k.jpg.pyr, Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
 
-Nara.png <- nara3.png
-   - Keywords: Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
+Nara.png <- nara3.png, Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
 
-Nara.desc <- NARA.png
-   - Keywords: Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
+Nara.desc <- NARA.png, Visual elements, see billions of records in a number of ways, archivists, The National Archives and Records Administration, Maria Esteva, Suyong D. Jain
 
-Cell_Config_Schematic.png <- coinCell1013_f.png
-   - Keywords: Schematic of configuration of a cell composed of liquid Na-k anode, a liquid-carbonate Na+ elecrolyte, Na2/3Ni1/3Mn2/3O2 cathode, L. Xue, H. Gao, Y. Li, J. B. Goodenough, Maya, Jo Wozniak
+Cell_Config_Schematic.png <- coinCell1013_f.png, Schematic of configuration of a cell composed of liquid Na-k anode, a liquid-carbonate Na+ elecrolyte, Na2/3Ni1/3Mn2/3O2 cathode, L. Xue, H. Gao, Y. Li, J. B. Goodenough, Maya, Jo Wozniak
 
-Cell_Config_Schematic.desc <- CoinCellCaption.jpg
-   - Keywords: Schematic of configuration of a cell composed of liquid Na-k anode, a liquid-carbonate Na+ elecrolyte, Na2/3Ni1/3Mn2/3O2 cathode, L. Xue, H. Gao, Y. Li, J. B. Goodenough, Maya, Jo Wozniak
+Cell_Config_Schematic.desc <- CoinCellCaption.jpg, Schematic of configuration of a cell composed of liquid Na-k anode, a liquid-carbonate Na+ elecrolyte, Na2/3Ni1/3Mn2/3O2 cathode, L. Xue, H. Gao, Y. Li, J. B. Goodenough, Maya, Jo Wozniak
 
-Ion_DNA_Density.jpg <- SCFinal_dna.jpg
-   - Keywords: electron density of surrounding ions mechanism of ion-DNA, interaction and double helix structure modulation, D. Roe, UofUtah, A. Gomez, TACC, Anne Bowen, Science, Visualization
+Ion_DNA_Density.jpg <- SCFinal_dna.jpg, electron density of surrounding ions mechanism of ion-DNA, interaction and double helix structure modulation, D. Roe, UofUtah, A. Gomez, TACC, Anne Bowen, Science, Visualization
 
-Ion_DNA_Density.desc <- DNAcaption.jpg
-   - Keywords: electron density of surrounding ions mechanism of ion-DNA, interaction and double helix structure modulation, D. Roe, UofUtah, A. Gomez, TACC, Anne Bowen, Science, Visualization
+Ion_DNA_Density.desc <- DNAcaption.jpg, electron density of surrounding ions mechanism of ion-DNA, interaction and double helix structure modulation, D. Roe, UofUtah, A. Gomez, TACC, Anne Bowen, Science, Visualization
 
-Infection_Simulation_Demo.mov <- Exercise-fullrun.mov
-   - Keywords: Infection, Harris County, Infected, HSR, Simulation, Event Monitor
+Infection_Simulation_Demo.mov <- Exercise-fullrun.mov, Infection, Harris County, Infected, HSR, Simulation, Event Monitor
 
-Arctic_Ocean_Interactions.mov <- foss-ices-arctic-small-vid_082318.mov
-   - Keywords: Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
+Arctic_Ocean_Interactions.mov <- foss-ices-arctic-small-vid_082318.mov, Arctic Ocean, Sea Ice, Simulation, An Nguyen, Arash Bigdeli, Victor Ocana, and Patrick Heimbach, Jackson School of Geosciences
 
-Mistral_Linear_Plasma.mp4 <- foss-may03-18_rE11-rE12-rE13-rE14.mp4
-   - Keywords: Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
+Mistral_Linear_Plasma.mp4 <- foss-may03-18_rE11-rE12-rE13-rE14.mp4, Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
 
-Mistral_Linear_Plasma_2.jpg <- foss-pearc18-mistral-composite.jpg
-   - Keywords: Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
+Mistral_Linear_Plasma_2.jpg <- foss-pearc18-mistral-composite.jpg, Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
 
-Mistral_Linear_Plasma.desc <- PlasmaCaption.jpg
-   - Keywords: Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
+Mistral_Linear_Plasma.desc <- PlasmaCaption.jpg, Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
 
-Mistral_Linear_Plasma_2.desc <- PlasmaLabel.jpg
-   - Keywords: Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
+Mistral_Linear_Plasma_2.desc <- PlasmaLabel.jpg, Nonlinear evolution of four 3D scalar fields, magnetized plasma, Left to right, Electric Potential (V), Magnetic Flux (Wb), Plasma Density (I/m^3), Plasma Pressure (Po), Wendell Horton, Lee Leonard, IFS, UT Austin, Confinement, Simulation, turbulence to validate design parameters, France, Wendell Horton, Lee Leonard, IFS, UT Austin, Greg Foss
 
-Hurricane_Sandy_Hindcast.mp4 <- foss-may18-17_Sandy_s-b-k.mp4
-   - Keywords: Simulation, 2012, infamous 'left turn' into the US East Coast, Fuqing Zhang, Penn State University
+Hurricane_Sandy_Hindcast.mp4 <- foss-may18-17_Sandy_s-b-k.mp4, Simulation, 2012, infamous 'left turn' into the US East Coast, Fuqing Zhang, Penn State University
 
-Hurricane_Sandy_Hindcast.desc <- SandyCaption.jpg 
-   - Keywords: Simulation, 2012, infamous 'left turn' into the US East Coast, Fuqing Zhang, Penn State University, fuqing-sandy_Caption.png
+Hurricane_Sandy_Hindcast.desc <- SandyCaption.jpg, Simulation, 2012, infamous 'left turn' into the US East Coast, Fuqing Zhang, Penn State University, fuqing-sandy_Caption.png
 
-Hurricane_Gonzalo_Simulation.mp4 <- Hurricane_edit_1.mp4
-   - Keywords: sum of cloud, rain, snow, graupel, ice; and horozontal wind speed, Fuqing Zhang, Yonghui Weng, Penn State University, Greg Foss, TACC
+Hurricane_Gonzalo_Simulation.mp4 <- Hurricane_edit_1.mp4, sum of cloud, rain, snow, graupel, ice; and horozontal wind speed, Fuqing Zhang, Yonghui Weng, Penn State University, Greg Foss, TACC
 
-Full_Tumor_Composite.jpg <- fulltumor_comp_v1-anne.jpg
-   - Keywords: Tumor, Cells, Velocity, Anne
+Full_Tumor_Composite.jpg <- fulltumor_comp_v1-anne.jpg, Tumor, Cells, Velocity, Anne
 
-A_Sunday_On_La_Grande_Jatte.pyr <- Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg.pyr
-   - Keywords: Google Art Project, George Seurat, 1884, Painting
+A_Sunday_On_La_Grande_Jatte.pyr <- Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg.pyr, Google Art Project, George Seurat, 1884, Painting
 
-A_Sunday_On_La_Grande_Jatte.desc <- LaGradeJatteCaption.jpg
-   - Keywords: Google Art Project, George Seurat, 1884, Painting
+A_Sunday_On_La_Grande_Jatte.desc <- LaGradeJatteCaption.jpg, Google Art Project, George Seurat, 1884, Painting
 
-Scotland_Seal.jpg <- gigamacro_historic_scotland_seal_18K_17K.jpg
-   - Keywords: History, Horse, Knight
+Scotland_Seal.jpg <- gigamacro_historic_scotland_seal_18K_17K.jpg, History, Horse, Knight
 
-Green_Ship.pyr <- Green_Ship.jpg.pyr
-   - Keywords: Volume visualization of fluid dynamics vector field beneath ship virtual rheoscopic fluids, Paul Navratil, Bill Barth, TACC
+Green_Ship.pyr <- Green_Ship.jpg.pyr, Volume visualization of fluid dynamics vector field beneath ship virtual rheoscopic fluids, Paul Navratil, Bill Barth, TACC
 
-Ionospheric_Plasma.mov <- GregF_Lola_plasma_FinalTACC.mov
-   - Keywords: Rotating cylinder, ionospheric plasma charge density, Wendell Horton, Lee Leonard, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike
+Ionospheric_Plasma.mov <- GregF_Lola_plasma_FinalTACC.mov, Rotating cylinder, ionospheric plasma charge density, Wendell Horton, Lee Leonard, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike
 
-Ionospheric_Plasma.desc <- plasmaCaption.png
-   - Keywords: Rotating cylinder, ionospheric plasma charge density, Wendell Horton, Lee Leonard, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike
+Ionospheric_Plasma.desc <- plasmaCaption.png, Rotating cylinder, ionospheric plasma charge density, Wendell Horton, Lee Leonard, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike
 
-Streamwise_Vorticity.mp4 <- GregFoss_StreamwiseVorticityInSupercellThunderstormSimulation.mp4
-   - Keywords: Wind velocity, supercell, thunderstorm featuring a vortex ring forming, updraft pushes into the stratosphere, Greg Foss, Brittany Dahl, Amy McGovern, Greg Abram, Sean Cunningham
+Streamwise_Vorticity.mp4 <- GregFoss_StreamwiseVorticityInSupercellThunderstormSimulation.mp4, Wind velocity, supercell, thunderstorm featuring a vortex ring forming, updraft pushes into the stratosphere, Greg Foss, Brittany Dahl, Amy McGovern, Greg Abram, Sean Cunningham
 
-Streamwise_Vorticity.desc <- Vortex.png
-   - Keywords: Wind velocity, supercell, thunderstorm featuring a vortex ring forming, updraft pushes into the stratosphere, Greg Foss, Brittany Dahl, Amy McGovern, Greg Abram, Sean Cunningham
+Streamwise_Vorticity.desc <- Vortex.png, Wind velocity, supercell, thunderstorm featuring a vortex ring forming, updraft pushes into the stratosphere, Greg Foss, Brittany Dahl, Amy McGovern, Greg Abram, Sean Cunningham
 
-Japan_Earthquake.avi <- Japan_Earthquake.avi
-   - Keywords: Visualization, simulation, Japan's 2011, induced seismic waves, forest-of-octrees, AMR, Carsten Burstedde, ICES, Greg Abram
+Japan_Earthquake.avi <- Japan_Earthquake.avi, Visualization, simulation, Japan's 2011, induced seismic waves, forest-of-octrees, AMR, Carsten Burstedde, ICES, Greg Abram
 
-Japan_Eartquake.desc <- Japan.png
-   - Keywords: Visualization, simulation, Japan's 2011, induced seismic waves, forest-of-octrees, AMR, Carsten Burstedde, ICES, Greg Abram
+Japan_Eartquake.desc <- Japan.png, Visualization, simulation, Japan's 2011, induced seismic waves, forest-of-octrees, AMR, Carsten Burstedde, ICES, Greg Abram
 
-Turbulent_Flow.pyr <- Long_fire.png.pyr
-   - Keywords: Petascale direct numerical, simulation, MK Lee, Nicholas Malaya, Robert Moser, ICES
+Turbulent_Flow.pyr <- Long_fire.png.pyr, Petascale direct numerical, simulation, MK Lee, Nicholas Malaya, Robert Moser, ICES
 
-Turbulent_Flow.desc <- Long Red.png
-   - Keywords: Petascale direct numerical, simulation, MK Lee, Nicholas Malaya, Robert Moser, ICES
+Turbulent_Flow.desc <- Long Red.png, Petascale direct numerical, simulation, MK Lee, Nicholas Malaya, Robert Moser, ICES
 
-Laser_Image_Stereo.png <- lRange.png
-   - Keywords: Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
+Laser_Image_Stereo.png <- lRange.png, Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
-Natural_Scene_Stereo.png <- Image009Stereo.png
-   - Keywords: Steroscopic imaage, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
+Natural_Scene_Stereo.png <- Image009Stereo.png, Steroscopic imaage, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
-Laser_Natural_Stereo.desc <- stereotreeDesc.jpg
-   - Keywords: Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
+Laser_Natural_Stereo.desc <- stereotreeDesc.jpg, Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
-Mantle_Convection.mp4 <- MantleConvection.mp4
-   - Keywords: Visualization, mantle flowing through, Earth, starting at a subduction located, Mariana Trench, Omar Ghattas & Johann Rudi, Greg Abram, TACC, ICES
+Mantle_Convection.mp4 <- MantleConvection.mp4, Visualization, mantle flowing through, Earth, starting at a subduction located, Mariana Trench, Omar Ghattas & Johann Rudi, Greg Abram, TACC, ICES
 
-Mantle_Convection.desc <- MantleConvectionCaption.jpg
-   - Keywords: Visualization, mantle flowing through, Earth, starting at a subduction located, Mariana Trench, Omar Ghattas & Johann Rudi, Greg Abram, TACC, ICES
+Mantle_Convection.desc <- MantleConvectionCaption.jpg, Visualization, mantle flowing through, Earth, starting at a subduction located, Mariana Trench, Omar Ghattas & Johann Rudi, Greg Abram, TACC, ICES
 
-RUND_Mesh2.png <- mesh2.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Mesh2.png <- mesh2.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-RUND_Mesh_Crs.png <- mesh_crs.png
-   - Keywords: Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
+RUND_Mesh_Crs.png <- mesh_crs.png, Science, Aerospace, Aeronautics, Dynamics, Currents, RUND, Aircraft, Jackson W. Massey, Ali E. Yilmaz
 
-FOA_Indoor <- monostatic_10GHz.png
-   - Keywords: FOA, Indoor, Measurement, dBsm, Azimuth Angle, AIM
+FOA_Indoor.png <- monostatic_10GHz.png, FOA, Indoor, Measurement, dBsm, Azimuth Angle, AIM
 
-Nano_Drug_Delivery.mov <- Vulnerable_Plaques_1920x1080.mov
-   - Keywords: Simulation, Simulating Patient-specific, nano-particulate drug delivery, treatment, vulnerable plaques, Shaolie Hossain, Thomas Hughes, Ben Urick, Jo Wozniak, Erik Sumalt, ICES, TACC
+Nano_Drug_Delivery.mov <- Vulnerable_Plaques_1920x1080.mov, Simulation, Simulating Patient-specific, nano-particulate drug delivery, treatment, vulnerable plaques, Shaolie Hossain, Thomas Hughes, Ben Urick, Jo Wozniak, Erik Sumalt, ICES, TACC
 
-Nano_Drug_Delivery.desc <- Nano_particle_drug_delivery.png
-   - Keywords: Simulation, Simulating Patient-specific, nano-particulate drug delivery, treatment, vulnerable plaques, Shaolie Hossain, Thomas Hughes, Ben Urick, Jo Wozniak, Erik Sumalt, ICES, TACC
+Nano_Drug_Delivery.desc <- Nano_particle_drug_delivery.png, Simulation, Simulating Patient-specific, nano-particulate drug delivery, treatment, vulnerable plaques, Shaolie Hossain, Thomas Hughes, Ben Urick, Jo Wozniak, Erik Sumalt, ICES, TACC
 
-TACC_Light_Diffusion.mp4 <- light storage diffusion.mp4
-   - Keywords: Many particle simulation, storage, pulsed optical field, 3-level atomic medium using dark-state, Coherent Population Trapping, Typical diffusion after some microseconds of storage due to thermal velocity
+TACC_Light_Diffusion.mp4 <- light storage diffusion.mp4, Many particle simulation, storage, pulsed optical field, 3-level atomic medium using dark-state, Coherent Population Trapping, Typical diffusion after some microseconds of storage due to thermal velocity
 
-Atoms_Repulsion.mp4 <- ii_repulsion.mp4
-   - Keywords: Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, blue-detuned optical beam, Continuous wave Electromagnetic field, in a cloud of atoms
+Atoms_Repulsion.mp4 <- ii_repulsion.mp4, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, blue-detuned optical beam, Continuous wave Electromagnetic field, in a cloud of atoms
 
-Atoms_Repulsion_8k.mp4 <- repulsion_8k.mp4
-   - Keywords: Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, blue-detuned optical beam, Continuous wave Electromagnetic field, in a cloud of atoms
+Atoms_Repulsion_8k.mp4 <- repulsion_8k.mp4, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, blue-detuned optical beam, Continuous wave Electromagnetic field, in a cloud of atoms
 
-Atoms_Trapping.mp4 <- trapping.mp4
-   - Keywords: Trapping created, continuous wave electromagnetic field, cloud of atoms, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, red-detuned optical beam
+Atoms_Trapping.mp4 <- trapping.mp4, Trapping created, continuous wave electromagnetic field, cloud of atoms, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, red-detuned optical beam
 
-Atoms_Trapping_8k.mp4 <- trapping_8k.mp4
-   - Keywords: Trapping created, continuous wave electromagnetic field, cloud of atoms, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, red-detuned optical beam
+Atoms_Trapping_8k.mp4 <- trapping_8k.mp4, Trapping created, continuous wave electromagnetic field, cloud of atoms, Numerical simulation, many-particle system illustrating the typical effect, electric dipole force, red-detuned optical beam
 
-Fram_Strait.png <- oct17-17_FramStrait_SC17_3000x4000.png
-   - Keywords: passage between Greenland and Svalbard, located roughly between 77 N and 8 N latitudes and centered on the prime meridian.
+Fram_Strait.png <- oct17-17_FramStrait_SC17_3000x4000.png, passage between Greenland and Svalbard, located roughly between 77 N and 8 N latitudes and centered on the prime meridian.
 
-Methane_Combustion.png <- oct26-17_C-cntr_OSP_3200x3200.png
-   - Keywords: Reaction, Methane, Aerospace, Yellow, Explosion, Greg Foss
+Methane_Combustion.png <- oct26-17_C-cntr_OSP_3200x3200.png, Reaction, Methane, Aerospace, Yellow, Explosion, Greg Foss
 
-Ionspheric_Plasma_Charge.mov <- PlasmaNew.mov
-   - Keywords: Simulation, rotating cylinder, ionspheric plasma charge, density, Wendell Horton, Lee Leonard, UT Austin, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike, TACC
+Ionspheric_Plasma_Charge.mov <- PlasmaNew.mov, Simulation, rotating cylinder, ionspheric plasma charge, density, Wendell Horton, Lee Leonard, UT Austin, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike, TACC
 
-Ionspheric_Plasma_Charge.desc <- plasmaCaption.png
-    - Keywords: Simulation, rotating cylinder, ionspheric plasma charge, density, Wendell Horton, Lee Leonard, UT Austin, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike, TACC
+Ionspheric_Plasma_Charge.desc <- plasmaCaption.png, Simulation, rotating cylinder, ionspheric plasma charge, density, Wendell Horton, Lee Leonard, UT Austin, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike, TACC
