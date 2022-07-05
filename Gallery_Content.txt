@@ -1,3 +1,5 @@
+NEW_FILE_NAME.PNG <- OLD_FILE_NAME, KEYWORD_1, KEYWORD_2, KEYWORD3,...
+
 3_Spinning_Stars.mp4 <- 3_Spinning_Stars.mp4, Science, Astronomy, Stars, Magnetism, Fields, Convection, Envelope, Greg Foss
 
 3_Spinning_Stars.desc <- Star Magnetic Field.png, Science, Astronomy, Stars, Magnetism, Fields
@@ -142,7 +144,7 @@ Turbulent_Flow.desc <- Long Red.png, Petascale direct numerical, simulation, MK 
 
 Laser_Image_Stereo.png <- lRange.png, Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
-Natural_Scene_Stereo.png <- Image009Stereo.png, Steroscopic imaage, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
+Natural_Scene_Stereo.png <- Image009Stereo.png, Steroscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
 Laser_Natural_Stereo.desc <- stereotreeDesc.jpg, Stereoscopic image, natural scene coregistered, laser-measured 3D, position information, Brian McCann, CPS/TACC, Wilson Geisler, Mary Hayhoe
 
