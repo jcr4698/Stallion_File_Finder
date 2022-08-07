@@ -26,6 +26,7 @@ pid_t cpid;
 pid_t ccpid;
 int file_size;
 _Bool* was_found;
+int amt_found;
 char* buff;
 int line_count;
 
@@ -40,18 +41,23 @@ char opp_case(char c);
 int main(int argc, char* argv[]) {
 	int char_count = 0;
 	was_found = malloc((argc - 1) * sizeof(_Bool));
+	amt_found = 0;
 
 	for(int i = 1; i < argc; i++) {
 		was_found[i] = search_file_for(argv, i);
-		if(was_found[i])
+		if(was_found[i]) {
 			char_count += strlen(argv[i]) + 6;	// count chars for coincidences
+			amt_found++;
+		}
 	}
-	if(argc > 2)
+	if((argc > 2) && (amt_found > 1))
 		search_file_coincidences(argv, char_count, argc);
 
 	return 0;
 }
 
+/* Looks up index IDX from array CMD, which is a string. The grep command is
+ * used to look up this string within the file named "Gallery_Content.txt". */
 _Bool search_file_for(char* cmd[], int idx) {
 	
 	/* set up pipe 1 and child 1 */
@@ -116,6 +122,9 @@ _Bool search_file_for(char* cmd[], int idx) {
 	return TRUE;
 }
 
+/* Parses and stores all WORD_COUNT strings from CMD that were previously found.
+ * The awk command is used to look up lines from "Gallery_Content.txt". that contain
+ * all these keywords in common. */
 void search_file_coincidences(char* cmd[], int char_count, int word_count) {
 
 	/* parse the parameters of command */
@@ -132,8 +141,8 @@ void search_file_coincidences(char* cmd[], int char_count, int word_count) {
 	/* run 'awk' command */
 	else if(pid == 0) {
 		dup2(p1[PIPE_WRITE], STDOUT_FILENO);	// pipe child and parent process
-		close(p1[0]);
-        close(p1[1]);
+		close(p1[PIPE_READ]);
+        close(p1[PIPE_WRITE]);
 		execlp("awk", "awk", "-b", awk_search, GALLERY_NAME, (char*) NULL);
 	}
 	else {
@@ -142,8 +151,8 @@ void search_file_coincidences(char* cmd[], int char_count, int word_count) {
 		buff = malloc((file_size + 1) * sizeof(char));	// allocate buffer
 
 		dup2(p1[PIPE_READ], STDIN_FILENO);	// pipe child and parent process
-		close(p1[0]);
-        close(p1[1]);
+		close(p1[PIPE_READ]);
+        close(p1[PIPE_WRITE]);
 
 		if(pipe(p2) == -1)
 			exit(-1);
@@ -184,8 +193,8 @@ void search_file_coincidences(char* cmd[], int char_count, int word_count) {
 		}
 	}
 
-	close(p1[0]);
-    close(p1[1]);
+	close(p1[PIPE_READ]);
+    close(p1[PIPE_WRITE]);
 
 	waitpid(pid, NULL, 0);
 }
@@ -230,6 +239,7 @@ void awk_format_print(char* awk_search, char* cmd[], int char_count, int word_co
 	printf("\n");
 	change_text_color(CYAN);
 	awk_search[0] = '\000';
+	int amt_printed = 0;
 	for(int i = 1; i < word_count; i++) {
 		if(was_found[i]) {
 			// store string into key
@@ -239,8 +249,9 @@ void awk_format_print(char* awk_search, char* cmd[], int char_count, int word_co
 
 			// print word being searched
 			printf("\"%s\"", cmd[i]);
-			if(i < word_count - 1)
+			if(amt_printed < amt_found - 1)
 				printf(", ");
+			amt_printed++;
 		}
 	}
 	awk_search[char_count - 4] = '\000';

@@ -1,0 +1,10 @@
+Fill in the file information with the corresponding new name, old name, and description/keywords.
+Don't erase the end command, i.e. leave "End # leave this here" as it is.
+
+> New Name: # Write under this line
+
+> Old Name: # Write under this line
+
+> Desc/Keywords: # Write under this line
+
+> End # leave this here
