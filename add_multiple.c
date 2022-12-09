@@ -5,7 +5,8 @@
 #include <sys/wait.h>
 #include "add_file.h"
 
-#define GALLERY_ADD "Gallery_Add_Multiple.txt"
+// #define GALLERY_ADD "Gallery_Add_Multiple.txt"
+#define GALLERY_ADD "Mock_Gallery_Add_Multiple.txt"
 
 int next_line(int curr_idx, char* temp_buff);
 int find_file_contents(char* curr_buff);
@@ -31,7 +32,9 @@ int main(int argc, char* argv[]) {
     
     /* scan each line of the file */
     char* curr_buff = malloc((file_size + 1) * sizeof(char));
-    reset_gallery_add(gallery);
+    FILE *file_ptr = fopen(GALLERY_ADD, "w+");
+    reset_gallery_add(file_ptr);
+    fclose(file_ptr);
     for(int curr_ch = 0; curr_ch < file_size; curr_ch++) {
         curr_ch = next_line(curr_ch, curr_buff);
         strcpy(curr_buff, strtrim(curr_buff));
@@ -40,7 +43,9 @@ int main(int argc, char* argv[]) {
                 if(!(prev_sym_links = sym_link_valid(gallery, pid, p1, old_name, file_size))
                     && (old_exists = file_exists(old_name, COMMON_FOLDER))
                     && !(new_exists = file_exists(new_name, CONTENTS_FOLDER))) {
-                    add_to_gallery(gallery, new_name, old_name, desc);
+                    FILE *file_ptr = fopen(GALLERY_NAME, "a");
+                    add_to_gallery(file_ptr, new_name, old_name, desc);
+                    fclose(file_ptr);
                     make_symbolic_link(pid, CONTENTS_FOLDER, new_name, old_name);
                 }
                 else {
@@ -156,14 +161,10 @@ int find_file_contents(char* curr_buff) {
 }
 
 void reset_gallery_add(FILE* file_ptr) {
-    file_ptr = fopen(GALLERY_ADD, "w+");
     char line_0[] = "# Fill out information below in this format (all information for one file must be in one line):\n";
     char line_1[] = "# NEW_FILE_NAME.PNG <- OLD_FILE_NAME.PNG, KEYWORD_1, KEYWORD_2, KEYWORD3,...";
     if(file_ptr != NULL) {
-        char* str = malloc((strlen(line_0) + strlen(line_1)) * sizeof(char));
-        strcat(str, line_0);
-        strcat(str, line_1);
-        fputs(str, file_ptr);
-        fclose(file_ptr);
+        fprintf(file_ptr, "%s\n%s", line_0, line_1);
+
     }
 }

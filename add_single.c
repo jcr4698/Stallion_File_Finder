@@ -6,7 +6,8 @@
 #include <string.h>
 #include "add_file.h"
 
-#define GALLERY_ADD "Gallery_Add_Single.txt"
+// #define GALLERY_ADD "Gallery_Add_Single.txt"
+#define GALLERY_ADD "Mock_Gallery_ADD_Single.txt"
 
 int find_file_contents(int file_size);
 int get_c_idx(int file_size, int c, int* find_mode);
@@ -24,20 +25,31 @@ pid_t pid;
 pid_t cpid;
 
 int main(int argc, char* argv[]) {
+    
+    /* Handler any abort errors */
+    signal(SIGABRT, sigAbrtHandler);
+
+    /* File variables */
     int new_exists = 0;
     int old_exists = 1;
     int prev_sym_links = 0;
     int file_size = get_file_size(gallery, GALLERY_ADD);
     buff = read_file(gallery, GALLERY_ADD, file_size);
+
+    /* Determine whether symbolic link is possible */
     if((find_file_contents(file_size) > 0) && !(prev_sym_links = sym_link_valid(gallery, pid, p1, old_name, file_size))
                                            && (old_exists = file_exists(old_name, COMMON_FOLDER))
                                            && !(new_exists = file_exists(new_name, CONTENTS_FOLDER))) {
-        add_to_gallery(gallery, new_name, old_name, desc);
+        FILE *file_ptr = fopen(GALLERY_NAME, "a");
+        add_to_gallery(file_ptr, new_name, old_name, desc);
+        fclose(file_ptr);
         if((old_name != NULL) && (strlen(old_name) > 0))
             make_symbolic_link(pid, CONTENTS_FOLDER, new_name, old_name);
-        reset_gallery_add(gallery);
+        file_ptr = fopen(GALLERY_ADD, "w+");
+        reset_gallery_add(file_ptr);
+        fclose(file_ptr);
     }
-    else {
+    else { /* Output details on why symbolic link was NOT possible */
         if(!old_exists)
             printf("File name \"%s\" doesn't exist in current working directory. Can't create symbolic link\n", old_name);
         if(new_exists) {
@@ -47,6 +59,12 @@ int main(int argc, char* argv[]) {
         if(prev_sym_links)
             printf("File name \"%s\" already has a symbolic link.\n", old_name);
     }
+
+    /* free memory */
+    free(buff);
+    free(new_name);
+    free(old_name);
+    free(desc);
 
     return 0;
 }
@@ -64,21 +82,24 @@ int find_file_contents(int file_size) {
             buff[buff_idx] = buff[c];
             buff_idx++;
             if(prev_mode != find_mode) {
-                buff[buff_idx - 1] = '\000';
+                //buff[buff_idx - 1] = '\000';
                 if(prev_mode == 0) {
                     new_name = malloc(buff_idx * sizeof(char));
-                    strcpy(new_name, strtrim(buff));
-                    // printf("New Name: %s\n", new_name);
+                    strncpy(new_name, buff, buff_idx - 1);
+                    strcpy(new_name, strtrim(new_name));
+                    // printf("|%s|\n", new_name);
                 }
                 else if(prev_mode == 1) {
                     old_name = malloc(buff_idx * sizeof(char));
-                    strcpy(old_name, strtrim(buff));
-                    // printf("Old Name: %s\n", old_name);
+                    strncpy(old_name, buff, buff_idx - 1);
+                    strcpy(old_name, strtrim(old_name));
+                    // printf("|%s|\n", old_name);
                 }
                 else if(prev_mode == 2) {
                     desc = malloc(buff_idx * sizeof(char));
-                    strcpy(desc, strtrim(buff));
-                    // printf("Descrption(s): %s\n", desc);
+                    strncpy(desc, buff, buff_idx - 1);
+                    strcpy(desc, strtrim(desc));
+                    // printf("|%s|\n", desc);
                 }
                 buff_idx = 0;
             }
@@ -119,23 +140,16 @@ int get_c_idx(int file_size, int c, int* find_mode) {
 }
 
 void reset_gallery_add(FILE* file_ptr) {
-    file_ptr = fopen(GALLERY_ADD, "w+");
-    char line_0[] = "Fill in the file information with the corresponding new name, old name, and description/keywords.\n";
-    char line_1[] = "Don't erase the end command, i.e. leave \"End # leave this here\" as it is.\n\n";
-    char line_2[] = "> New Name: # Write under this line\n\n";
-    char line_3[] = "> Old Name: # Write under this line\n\n";
-    char line_4[] = "> Desc/Keywords: # Write under this line\n\n";
+    
+    signal(SIGABRT, sigAbrtHandler);
+
+    char line_0[] = "Fill in the file information with the corresponding new name, old name, and description/keywords.";
+    char line_1[] = "Don't erase the end command, i.e. leave \"End # leave this here\" as it is.";
+    char line_2[] = "> New Name: # Write under this line";
+    char line_3[] = "> Old Name: # Write under this line";
+    char line_4[] = "> Desc/Keywords: # Write under this line";
     char line_5[] = "> End # leave this here";
-    if(file_ptr != NULL) {
-        int char_size = strlen(line_0) + strlen(line_1) + strlen(line_2) + strlen(line_3) + strlen(line_4) + strlen(line_5);
-        char* str = malloc(char_size * sizeof(char));
-        strcat(str, line_0);
-        strcat(str, line_1);
-        strcat(str, line_2);
-        strcat(str, line_3);
-        strcat(str, line_4);
-        strcat(str, line_5);
-        fputs(str, file_ptr);
-        fclose(file_ptr);
-    }
+    if(file_ptr != NULL)
+        fprintf(file_ptr, "%s\n%s\n\n%s\n\n%s\n\n%s\n\n%s", line_0, line_1, line_2, line_3, line_4, line_5);
 }
+

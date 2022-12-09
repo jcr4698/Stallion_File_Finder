@@ -1,0 +1,20 @@
+search.c
+
+Purpose:
+        Many researchers use the stallion gallery to store their project files. However, over time these files get lost in gallery because their naming conventions 
+    become insigificant to people who aren't familiarized with them. The purpose of "search.c" is to find file names given a set of keywords associated with
+    the project. The program will output all the files that match that description.
+
+How to use:
+    ./search <keyword_1> <keyword_2> ... <keyword_n>
+    
+        The program takes multiple keywords (inputs) at once as long as they are separated by a space. This will output file names that have a specific
+    keyword in common (and how many files were found). Note: some key words may share a file name.
+
+    ex.) 
+
+Files:
+    > search.c:
+          In this implementation I used a "for" loop that finds the keywords given (argv[1], argv[2], ... argv[n]). Each loop runs 2 child processes (fork twice),
+          which I used to exec the "grep" and "grep -c" commands and pipe into the stdin. Then, the parent process takes the stdout
+    > Makefile
