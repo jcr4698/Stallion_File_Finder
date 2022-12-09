@@ -17,9 +17,9 @@
 // #define GALLERY_NAME "Gallery_Content.txt"
 #define GALLERY_NAME "Mock_Gallery_Content.txt"
 // #define CONTENTS_FOLDER "/home/vislab/Gallery/Content"
-#define CONTENTS_FOLDER "/Content"
+#define CONTENTS_FOLDER "../Content"
 // #define COMMON_FOLDER "/home/vislab/Gallery/common_content"
-#define COMMON_FOLDER "/common_content"
+#define COMMON_FOLDER "../common_content"
 
 void sigAbrtHandler(int sig);
 char* read_file(FILE* file_ptr, char* file_name, int file_size);
@@ -126,9 +126,9 @@ void add_to_gallery(FILE* file_ptr, char* new_name, char* old_name, char* desc) 
     signal(SIGABRT, sigAbrtHandler);
 
     if(old_name == NULL)
-        printf("\n\n%s <- %s\n", new_name, desc);
+        printf("\n%s <- %s\n", new_name, desc);
     else
-        printf("\n\n%s <- %s, %s\n", new_name, old_name, desc);
+        printf("\n%s <- %s, %s\n", new_name, old_name, desc);
 
     /* add string to 'Gallery_Content.txt' */
     //file_ptr = fopen(GALLERY_NAME, "a");

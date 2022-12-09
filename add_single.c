@@ -7,7 +7,7 @@
 #include "add_file.h"
 
 // #define GALLERY_ADD "Gallery_Add_Single.txt"
-#define GALLERY_ADD "Mock_Gallery_ADD_Single.txt"
+#define GALLERY_ADD "Mock_Gallery_Add_Single.txt"
 
 int find_file_contents(int file_size);
 int get_c_idx(int file_size, int c, int* find_mode);
@@ -82,22 +82,22 @@ int find_file_contents(int file_size) {
             buff[buff_idx] = buff[c];
             buff_idx++;
             if(prev_mode != find_mode) {
-                //buff[buff_idx - 1] = '\000';
+                buff[buff_idx - 1] = '\000';
                 if(prev_mode == 0) {
                     new_name = malloc(buff_idx * sizeof(char));
-                    strncpy(new_name, buff, buff_idx - 1);
+                    strncpy(new_name, buff, buff_idx);
                     strcpy(new_name, strtrim(new_name));
                     // printf("|%s|\n", new_name);
                 }
                 else if(prev_mode == 1) {
                     old_name = malloc(buff_idx * sizeof(char));
-                    strncpy(old_name, buff, buff_idx - 1);
+                    strncpy(old_name, buff, buff_idx);
                     strcpy(old_name, strtrim(old_name));
                     // printf("|%s|\n", old_name);
                 }
                 else if(prev_mode == 2) {
                     desc = malloc(buff_idx * sizeof(char));
-                    strncpy(desc, buff, buff_idx - 1);
+                    strncpy(desc, buff, buff_idx);
                     strcpy(desc, strtrim(desc));
                     // printf("|%s|\n", desc);
                 }
