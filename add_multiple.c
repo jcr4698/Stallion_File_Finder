@@ -70,7 +70,14 @@ int main(int argc, char* argv[]) {
                 failed_lines(gallery, curr_buff);
         }
     }
-    failed_lines(gallery, "\n");
+
+    /* save an extra new line */
+    FILE* new_line_ptr = fopen(GALLERY_ADD, "a");
+    if(new_line_ptr == NULL)
+        printf("Error opening file.\n");
+    else
+        fputs("\n", new_line_ptr);
+
     return 0;
 }
 

@@ -25,7 +25,7 @@ pid_t pid;
 pid_t cpid;
 
 int main(int argc, char* argv[]) {
-    
+
     /* Handler any abort errors */
     signal(SIGABRT, sigAbrtHandler);
 
@@ -33,6 +33,79 @@ int main(int argc, char* argv[]) {
     int new_exists = 0;
     int old_exists = 1;
     int prev_sym_links = 0;
+
+    /* if parameters are given. */
+    if(argc > 1) {
+
+        /* if new name, old name, and description are given as parameters. */
+        if(argc == 4) {
+            // get new name
+            int new_name_size = strlen(argv[1]);
+            new_name = malloc((new_name_size + 1) * sizeof(char));
+            strncpy(new_name, argv[1], new_name_size);
+
+            // get old name
+            int old_name_size = strlen(argv[2]);
+            old_name = malloc((old_name_size + 1) * sizeof(char));
+            strncpy(old_name, argv[2], old_name_size);
+            if(strstr(old_name, ".") == NULL) {
+
+                // print error message
+                change_text_color(RED);
+                printf("ERROR: \"%s\" isn't a proper file name. It must be type \".png\", \".jpg\", \".mov\", etc...\n\n", old_name);
+                change_text_color(DEFAULT);
+
+                // free memory
+                free(new_name);
+                free(old_name);
+
+                // return error
+                return -1;
+            }
+
+            // get description
+            int desc_size = strlen(argv[3]);
+            desc = malloc((desc_size + 1) * sizeof(char));
+            strncpy(desc, argv[3], desc_size);
+
+            // make symbolic link and add it to content
+            if(!(prev_sym_links = sym_link_valid(gallery, pid, p1, old_name, file_size))
+                && (old_exists = file_exists(old_name, COMMON_FOLDER))
+                && !(new_exists = file_exists(new_name, CONTENTS_FOLDER))) {
+                    FILE *file_ptr = fopen(GALLERY_NAME, "a");
+                    add_to_gallery(file_ptr, new_name, old_name, desc);
+                    fclose(file_ptr);
+                    if((old_name != NULL) && (strlen(old_name) > 0))
+                        make_symbolic_link(pid, CONTENTS_FOLDER, new_name, old_name);
+                    file_ptr = fopen(GALLERY_ADD, "w+");
+                    reset_gallery_add(file_ptr);
+                    fclose(file_ptr);
+            }
+            else { /* Output details on why symbolic link was NOT possible */
+                if(!old_exists)
+                    printf("File name \"%s\" doesn't exist in current working directory. Can't create symbolic link\n", old_name);
+                if(new_exists) {
+                    printf("Symbolic link name \"%s\" already exists.\n", new_name);
+                    return -1;
+                }
+                if(prev_sym_links)
+                    printf("File name \"%s\" already has a symbolic link.\n", old_name);
+            }
+
+            /* free memory */
+            free(buff);
+            free(new_name);
+            free(old_name);
+            free(desc);
+
+            return 0;
+        }
+        else
+            printf("ERROR: incorrect format. Try ./add_mult NEW_NAME OLD_NAME \"KEYWORD_1, KEYWORD_2, ...\"");
+    }
+
+    /* if no parameters are given (and "Gallery_Add_Single.txt" is filled out) */
+
     int file_size = get_file_size(gallery, GALLERY_ADD);
     buff = read_file(gallery, GALLERY_ADD, file_size);
 
@@ -54,6 +127,12 @@ int main(int argc, char* argv[]) {
             printf("File name \"%s\" doesn't exist in current working directory. Can't create symbolic link\n", old_name);
         if(new_exists) {
             printf("Symbolic link name \"%s\" already exists.\n", new_name);
+            /* free memory */
+            free(buff);
+            free(new_name);
+            free(old_name);
+            free(desc);
+
             return -1;
         }
         if(prev_sym_links)

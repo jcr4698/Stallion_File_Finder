@@ -39,8 +39,7 @@ void sigAbrtHandler(int sig) {
     else if(sig == SIGSEGV) {
         printf("\"Gallery_Add_Multiple.txt\" is probably empty.\n");
         exit(0);
-    }
-        
+    } 
 }
 
 char* read_file(FILE* file_ptr, char* file_name, int file_size) {
@@ -87,8 +86,10 @@ char* strtrim(char* str) {
     int curr_r = strlen(str);
     // replace error chars with spaces
     for(int idx = 0; idx < curr_r; idx++) {
-        if(str[idx] < 32 || str[curr_r] > 122)
-            str[idx] = ' ';
+        if(str[idx] < 32 || str[idx] > 122) {
+            if(str[idx] != '\n')
+                str[idx] = ' ';
+        }
     }
     // remove spaces in edges
     if((str[0] == ' ') || (str[0] == '\n') || (str[curr_r - 1] == ' ') || (str[curr_r - 1] == '\n')) {
