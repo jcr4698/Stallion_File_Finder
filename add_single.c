@@ -7,7 +7,7 @@
 #include "add_file.h"
 
 // #define GALLERY_ADD "Gallery_Add_Single.txt"
-#define GALLERY_ADD "Mock_Gallery_Add_Single.txt"
+#define GALLERY_ADD "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Stallion_File_Finder/Mock_Gallery_Add_Single.txt"
 
 int find_file_contents(int file_size);
 int get_c_idx(int file_size, int c, int* find_mode);
@@ -77,9 +77,9 @@ int main(int argc, char* argv[]) {
                     fclose(file_ptr);
                     if((old_name != NULL) && (strlen(old_name) > 0))
                         make_symbolic_link(pid, CONTENTS_FOLDER, new_name, old_name);
-                    file_ptr = fopen(GALLERY_ADD, "w+");
-                    reset_gallery_add(file_ptr);
-                    fclose(file_ptr);
+                    // file_ptr = fopen(GALLERY_ADD, "w+");
+                    // reset_gallery_add(file_ptr);
+                    // fclose(file_ptr);
             }
             else { /* Output details on why symbolic link was NOT possible */
                 if(!old_exists)

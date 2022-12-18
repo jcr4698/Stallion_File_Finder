@@ -6,7 +6,7 @@
 #include "add_file.h"
 
 // #define GALLERY_ADD "Gallery_Add_Multiple.txt"
-#define GALLERY_ADD "Mock_Gallery_Add_Multiple.txt"
+#define GALLERY_ADD "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Stallion_File_Finder/Mock_Gallery_Add_Multiple.txt"
 
 int next_line(int curr_idx, char* temp_buff);
 int find_file_contents(char* curr_buff);

@@ -6,8 +6,8 @@
 #include <string.h>
 #include <sys/types.h>
 
-#define TRUE 1
-#define FALSE 0
+// #define TRUE 1
+// #define FALSE 0
 #define PIPE_READ 0
 #define PIPE_WRITE 1
 #define CYAN "\033[0;36m"
@@ -15,11 +15,11 @@
 #define RED "\033[0;31m"
 #define DEFAULT "\033[0m"
 // #define GALLERY_NAME "Gallery_Content.txt"
-#define GALLERY_NAME "Mock_Gallery_Content.txt"
+#define GALLERY_NAME "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Stallion_File_Finder/Mock_Gallery_Content.txt"
 // #define CONTENTS_FOLDER "/home/vislab/Gallery/Content"
-#define CONTENTS_FOLDER "../Content"
+#define CONTENTS_FOLDER "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Content"
 // #define COMMON_FOLDER "/home/vislab/Gallery/common_content"
-#define COMMON_FOLDER "../common_content"
+#define COMMON_FOLDER "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/common_content"
 
 void sigAbrtHandler(int sig);
 char* read_file(FILE* file_ptr, char* file_name, int file_size);
@@ -73,10 +73,10 @@ _Bool file_exists(char* file_name, char* dir) {
     if(access(abs_file_name, F_OK) != -1) { // fread
         //fclose(abs_file_name);
         //free(abs_file_name);
-        return TRUE;
+        return 1;
     }
     //free(abs_file_name);
-    return FALSE;
+    return 0;
 }
 
 char* strtrim(char* str) {

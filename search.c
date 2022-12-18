@@ -10,7 +10,8 @@
 #define PIPE_WRITE 1
 #define TRUE 1
 #define FALSE 0
-#define GALLERY_NAME "Gallery_Content.txt"
+// #define GALLERY_NAME "Gallery_Content.txt"
+#define GALLERY_NAME "Mock_Gallery_Content.txt"
 #define FORMAT_COLUMN 4
 #define CYAN "\033[0;36m"
 #define GREEN "\033[0;32m"
