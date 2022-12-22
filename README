@@ -1,11 +1,117 @@
 search.c
 
 Purpose:
-        Many researchers use the stallion gallery to store their project files. However, over time these files get lost in gallery because their naming conventions 
-    become insigificant to people who aren't familiarized with them. The purpose of "search.c" is to find file names given a set of keywords associated with
-    the project. The program will output all the files that match that description.
 
-How to use:
+        Many researchers use the stallion gallery to store their project files. However, over time these files get lost in gallery because their naming conventions 
+    become insigificant to people who aren't familiarized with them. The purpose of this program is to find the names of these "lost" files and allow researchers
+    to make these files easier to find.
+
+Dependencies:
+
+    TL;DR - type these in the termial
+        sudo apt install libgtk-3-dev
+        sudo apt install gcc
+        sudo apt install pkg-config
+
+    -- More information is provided below --
+
+    The GUI uses the GTK3 Library, which can easily be installed using:
+        sudo apt install libgtk-3-dev
+    To verify whether the dependency is installed you can use:
+        dpkg -s libgtk-3-0 | grep 'Version'
+    
+    GTK3 requires a working version of gcc to compile the C-programs (Linux systems have it by default).
+    If not already installed, it can be installed using:
+        sudo apt install gcc
+    To verify whether the dependency is installed you can use:
+        gcc --version
+    
+    Lastly, to help link the GTK3 Library to the C-programs, gcc requires pkg-config, which can be installed using:
+        sudo apt install pkg-config
+    To verify whether the dependency is installed you can use:
+        pkg-config --version
+
+
+How to use the Graphical User Intefaces (GUI):
+
+    ./finder
+
+        This command takes no arguments, and brings up a window that prompts the user to enter keyword(s) (separated by a space if more than one)
+        that describe the file that you are looking for. When the "Find file" button is pressed, the terminal will output all files that match that description.
+
+        Example Input:
+            $ ./finder
+              -------------------------------------------------------
+            |                         finder                          |
+            | ------------------------------------------------------- |
+            |                                                         |
+            |                             ____________________        |
+            |               Lookup:      | TACC Greg          |       |
+            |                                                         |
+            |                             ____________________        |
+            |                            |      Find File     |       |
+            |                                                         |
+            |                                                         |
+            |                                                         |
+              -------------------------------------------------------
+
+       Example Output:
+            Find a file by keywords:
+
+            "TACC":
+            Arctic_Ocean_Interactions.jpg       Bark_Texture_TACC.jpg               Carbon_Nano_Battery.mp4             Carbon_Nano_Battery.desc
+            Blue_Spaghetti.png                  Blue_Spaghetti.desc                 Ion_DNA_Density.jpg                 Ion_DNA_Density.desc
+            Hurricane_Gonzalo_Simulation.mp4    Green_Ship.pyr                      Ionospheric_Plasma.mov              Laser_Image_Stereo.png
+            Natural_Scene_Stereo.png            Laser_Natural_Stereo.desc           Mantle_Convection.mp4               Mantle_Convection.desc
+            Nano_Drug_Delivery.mov              Nano_Drug_Delivery.desc             TACC_Light_Diffusion.mp4            Ionspheric_Plasma_Charge.mov
+            Ionspheric_Plasma_Charge.desc
+            --> 21 file(s) found w/ key "TACC"
+
+            "Greg":
+            3_Spinning_Stars.mp4                Mistral_Linear_Plasma.mp4           Mistral_Linear_Plasma_2.jpg         Mistral_Linear_Plasma.desc
+            Mistral_Linear_Plasma_2.desc        Hurricane_Gonzalo_Simulation.mp4    Ionospheric_Plasma.mov              Ionospheric_Plasma.desc
+            Streamwise_Vorticity.mp4            Streamwise_Vorticity.desc           Japan_Earthquake.avi                Japan_Eartquake.desc
+            Mantle_Convection.mp4               Mantle_Convection.desc              Methane_Combustion.png              Ionspheric_Plasma_Charge.mov
+            Ionspheric_Plasma_Charge.desc
+            --> 17 file(s) found w/ key "Greg"
+
+            "TACC", "Greg":
+            Hurricane_Gonzalo_Simulation.mp4    Ionospheric_Plasma.mov              Mantle_Convection.mp4               Mantle_Convection.desc
+            Ionspheric_Plasma_Charge.mov        Ionspheric_Plasma_Charge.desc
+            --> 6 file(s) found w/ key "/TACC/ && /Greg/"
+                                                           
+
+    ./adder
+
+        This command takes no arguments, and brings up a window that prompts the user to enter a new file name, the original file name, and a description for that file.
+        When the
+
+        Example Input:
+            $ ./adder
+              -------------------------------------------------------
+            |                         adder                           |
+            | ------------------------------------------------------- |
+            |                                                         |
+            |                              ____________________       |
+            |             New Name:       | new_name.txt       |      |
+            |                              ____________________       |
+            |             Old Name:       | Image009134_xl.txt |      |
+            |                              ____________________      |
+            |           Description:      | Helpful descript...|     |
+            |                                                         |
+            |                             _____________________       |
+            |                            |       Add File      |      |
+            |                                                         |
+            |                                                         |
+              -------------------------------------------------------
+
+        Example output:
+            Add a Symbolic Link:
+
+            new_name.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab
+
+How to use terminal commands:
+
     ./search <keyword_1> <keyword_2> ... <keyword_n>
     
         The program takes multiple keywords (inputs) at once as long as they are separated by a space. This will output file names that have a specific
@@ -14,6 +120,7 @@ How to use:
     ex.) 
 
 Files:
+
     > search.c:
           In this implementation I used a "for" loop that finds the keywords given (argv[1], argv[2], ... argv[n]). Each loop runs 2 child processes (fork twice),
           which I used to exec the "grep" and "grep -c" commands and pipe into the stdin. Then, the parent process takes the stdout
