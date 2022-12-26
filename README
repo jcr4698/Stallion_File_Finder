@@ -2,7 +2,7 @@ search.c
 
 Purpose:
 
-        Many researchers use the stallion gallery to store their project files. However, over time these files get lost in gallery because their naming conventions 
+    Many researchers use the stallion gallery to store their project files. However, over time these files get lost in gallery because their naming conventions 
     become insigificant to people who aren't familiarized with them. The purpose of this program is to find the names of these "lost" files and allow researchers
     to make these files easier to find.
 
@@ -34,19 +34,22 @@ Dependencies:
 
 How to use the Graphical User Intefaces (GUI):
 
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     ./finder
 
-        This command takes no arguments, and brings up a window that prompts the user to enter keyword(s) (separated by a space if more than one)
-        that describe the file that you are looking for. When the "Find file" button is pressed, the terminal will output all files that match that description.
+        This command takes no arguments, and brings up a window that prompts the user to enter keyword(s) that describe the file that
+        you are looking for (separated by a space if more than one). When the "Find File" button is pressed, the terminal will output
+        all files that match that description.
 
-        Example Input:
+        Example Input -
             $ ./finder
-              -------------------------------------------------------
+              _______________________________________________________
             |                         finder                          |
             | ------------------------------------------------------- |
             |                                                         |
             |                             ____________________        |
-            |               Lookup:      | TACC Greg          |       |
+            |               Lookup:      | TACC hello         |       |
             |                                                         |
             |                             ____________________        |
             |                            |      Find File     |       |
@@ -55,7 +58,7 @@ How to use the Graphical User Intefaces (GUI):
             |                                                         |
               -------------------------------------------------------
 
-       Example Output:
+       Example Output -
             Find a file by keywords:
 
             "TACC":
@@ -67,28 +70,24 @@ How to use the Graphical User Intefaces (GUI):
             Ionspheric_Plasma_Charge.desc
             --> 21 file(s) found w/ key "TACC"
 
-            "Greg":
-            3_Spinning_Stars.mp4                Mistral_Linear_Plasma.mp4           Mistral_Linear_Plasma_2.jpg         Mistral_Linear_Plasma.desc
-            Mistral_Linear_Plasma_2.desc        Hurricane_Gonzalo_Simulation.mp4    Ionospheric_Plasma.mov              Ionospheric_Plasma.desc
-            Streamwise_Vorticity.mp4            Streamwise_Vorticity.desc           Japan_Earthquake.avi                Japan_Eartquake.desc
-            Mantle_Convection.mp4               Mantle_Convection.desc              Methane_Combustion.png              Ionspheric_Plasma_Charge.mov
-            Ionspheric_Plasma_Charge.desc
-            --> 17 file(s) found w/ key "Greg"
+            "hello":
+            hi.txt
+            --> 1 file(s) found w/ key "hello"
 
-            "TACC", "Greg":
-            Hurricane_Gonzalo_Simulation.mp4    Ionospheric_Plasma.mov              Mantle_Convection.mp4               Mantle_Convection.desc
-            Ionspheric_Plasma_Charge.mov        Ionspheric_Plasma_Charge.desc
-            --> 6 file(s) found w/ key "/TACC/ && /Greg/"
-                                                           
+            "TACC", "hello":
+            --> 0 file(s) found w/ key "/TACC/ && /hello/"
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     ./adder
 
         This command takes no arguments, and brings up a window that prompts the user to enter a new file name, the original file name, and a description for that file.
-        When the
+        When the "Add File" button is pressed, the program will symbolically link the new name (of better convention) to the old name and save a description of this
+        file for future reference (these symbolic links will be located in the 'Contents' folder).
 
-        Example Input:
+        Example Input -
             $ ./adder
-              -------------------------------------------------------
+              _______________________________________________________
             |                         adder                           |
             | ------------------------------------------------------- |
             |                                                         |
@@ -96,8 +95,8 @@ How to use the Graphical User Intefaces (GUI):
             |             New Name:       | new_name.txt       |      |
             |                              ____________________       |
             |             Old Name:       | Image009134_xl.txt |      |
-            |                              ____________________      |
-            |           Description:      | Helpful descript...|     |
+            |                              ____________________       |
+            |           Description:      | Helpful descript...|      |
             |                                                         |
             |                             _____________________       |
             |                            |       Add File      |      |
@@ -105,23 +104,152 @@ How to use the Graphical User Intefaces (GUI):
             |                                                         |
               -------------------------------------------------------
 
-        Example output:
+        Example output -
             Add a Symbolic Link:
 
             new_name.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab
 
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 How to use terminal commands:
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     ./search <keyword_1> <keyword_2> ... <keyword_n>
     
-        The program takes multiple keywords (inputs) at once as long as they are separated by a space. This will output file names that have a specific
-    keyword in common (and how many files were found). Note: some key words may share a file name.
+        The program takes multiple keywords (inputs) at once as long as they are separated by a space. This will output all files that match that description.
 
-    ex.) 
+        Example Input -
+            $ ./search TACC hello
 
-Files:
+        Example Output -
+            "TACC":
+            Arctic_Ocean_Interactions.jpg       Bark_Texture_TACC.jpg               Carbon_Nano_Battery.mp4             Carbon_Nano_Battery.desc
+            Blue_Spaghetti.png                  Blue_Spaghetti.desc                 Ion_DNA_Density.jpg                 Ion_DNA_Density.desc
+            Hurricane_Gonzalo_Simulation.mp4    Green_Ship.pyr                      Ionospheric_Plasma.mov              Laser_Image_Stereo.png
+            Natural_Scene_Stereo.png            Laser_Natural_Stereo.desc           Mantle_Convection.mp4               Mantle_Convection.desc
+            Nano_Drug_Delivery.mov              Nano_Drug_Delivery.desc             TACC_Light_Diffusion.mp4            Ionspheric_Plasma_Charge.mov
+            Ionspheric_Plasma_Charge.desc
+            --> 21 file(s) found w/ key "TACC"
 
-    > search.c:
-          In this implementation I used a "for" loop that finds the keywords given (argv[1], argv[2], ... argv[n]). Each loop runs 2 child processes (fork twice),
-          which I used to exec the "grep" and "grep -c" commands and pipe into the stdin. Then, the parent process takes the stdout
-    > Makefile
+            "hello":
+            hi.txt
+            --> 1 file(s) found w/ key "hello"
+
+            "TACC", "hello":
+            --> 0 file(s) found w/ key "/TACC/ && /hello/"
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    ./add_singl <New_Name.txt> <Old_Name.txt> "<Description> <Keyword_1>, <Keyword_2>, ... <Keyword_n>"
+
+        The program takes a new file name, the original file name, and a description for that file. This will symbolically link the new name (of better convention)
+        to the old name and save a description of this file for future reference (these symbolic links will be located in the 'Contents' folder).
+    
+        Example Input -
+            $ ./add_singl new_name.txt Image009134_xl.txt "Helpful description of the file., TACC, STEM, Jan C. Rubio, Vislab"
+    
+        Example Output -
+            new_name.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab
+
+    ~ ~ ~
+    
+    ./add_singl
+
+        This command, much like './adder', will symbolically link a new name to the old name and save a description of this file for future reference,
+        but takes no arguments and requires for a step prior to running the command. The user must first provide the file information in
+        'Gallery_Add_Single.txt', which should be located in the 'Content' folder. The text file contains a field for each component (new file name,
+        original file name, and description), like so:
+             _________________________________________________________________________________________________________
+            |1   Fill in the file information with the corresponding new name, old name, and description/keywords.    |
+            |2   Don't erase the end command, i.e. leave "End # leave this here" as it is.                            |
+            |3                                                                                                        |
+            |4   > New Name: # Write under this line                                                                  |
+            |5                                                                                                        |
+            |6   > Old Name: # Write under this line                                                                  |
+            |7                                                                                                        |
+            |8   > Desc/Keywords: # Write under this line                                                             |
+            |9                                                                                                        |
+            |10  > End # leave this here                                                                              |
+            |_________________________________________________________________________________________________________|
+        Each component of the file must be entered below the corresponding lines marked "# Write under this line". You may edit this text with your prefered
+        text editor (Vim, Nano, Emacs, etc...). After filling the information, save it, close it, and run "./add_singl". The program will also reset the
+        state of 'Gallery_Add_Single.txt' to the way it was before any information was filled. Note: Text that begins with ">" must NOT be deleted as it will
+        be used to process the information.
+
+        Example Input -
+            $ vim /Content/Gallery_Add_Single.txt
+             _________________________________________________________________________________________________________
+            |1   Fill in the file information with the corresponding new name, old name, and description/keywords.    |
+            |2   Don't erase the end command, i.e. leave "End # leave this here" as it is.                            |
+            |3                                                                                                        |
+            |4   > New Name: # Write under this line                                                                  |
+            |5   new_name.txt                                                                                         |
+            |6                                                                                                        |
+            |7   > Old Name: # Write under this line                                                                  |
+            |8   Image009134_xl.txt                                                                                   |
+            |9                                                                                                        |
+            |10  > Desc/Keywords: # Write under this line                                                             |
+            |11  Helpful description of the file., TACC, STEM, Jan C. Rubio, Vislab                                   |
+            |12                                                                                                       |
+            |13  > End # leave this here                                                                              |
+            |_________________________________________________________________________________________________________|
+            $ ./add_singl
+        
+        Example Output -
+            new_name.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab
+    
+    ~ ~ ~
+
+    ./add_mult
+
+        This command, much like './adder', will symbolically link new names to old names and save descriptions of the files for future reference.
+        However, it has the ability to multiple files at once. It takes no arguments and requires a step prior to running the command. The user must
+        provide every files' information in 'Gallery_Add_Multiple.txt', which should be located in the 'Content' folder. Each file must be typed on
+        its own line and formatted in the following manner:
+             NEW_FILE_NAME.PNG <- OLD_FILE_NAME.PNG, KEYWORD_1, KEYWORD_2, KEYWORD3,...
+        The text file will look like so:
+             _________________________________________________________________________________________________________
+            |1   # Fill out information below in this format (all information for one file must be in one line):      |
+            |2                                                                                                        |
+            |3   # NEW_FILE_NAME.PNG <- OLD_FILE_NAME.PNG, KEYWORD_1, KEYWORD_2, KEYWORD3,...                         |
+            |_________________________________________________________________________________________________________|
+        You may edit this text with your prefered text editor (Vim, Nano, Emacs, etc...). After filling the information, save it, close it, and run "./add_mult".
+        The program will also reset the state of 'Gallery_Add_Single.txt' to the way it was before any information was filled.
+
+        Example Input -
+            $ vim /Content/Gallery_Add_Multiple.txt
+             ____________________________________________________________________________________________________________
+            |1   # Fill out information below in this format (all information for one file must be in one line):         |
+            |2                                                                                                           |
+            |3   # NEW_FILE_NAME.PNG <- OLD_FILE_NAME.PNG, KEYWORD_1, KEYWORD_2, KEYWORD3,...                            |
+            |4   new_name1.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab  |
+            |5   new_name2.txt <- Image091235_xl.txt, Another helpful description, TACC, STEM, Jan C. Rubio, Vislab      |
+            |____________________________________________________________________________________________________________|
+            $ ./add_mult
+        
+        Example Output -
+            new_name1.txt <- Image009134_xl.txt, Helpful description of the file, TACC, STEM, Jan C. Rubio, Vislab
+            new_name2.txt <- Image091235_xl.txt, Another helpful description, TACC, STEM, Jan C. Rubio, Vislab
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+How it works:
+
+    Requirements:
+        The whole program revolves around the 'Gallery_Content.txt' file, which must be located in the 'Content' folder at all times. This text file contains
+        the information (symbolic link and description) of all files. A single line contains all the information of a file, like so:
+            NEW_FILE_NAME.PNG <- OLD_FILE_NAME, KEYWORD_1, KEYWORD_2, KEYWORD3,...
+
+        Additionally, in order for the programs to properly add-to/search the 'Gallery_Content.txt', the original file must be placed in the 'common_content' folder.
+
+    Adding:
+        The program will 
+
+    Searching:
+        The program will parse the given key words and run two child processes (for each key word) in order to search through the 'Gallery_Content.txt' file.
+        If a key word is found in the description of a file the program will output the name of that file.
+
+        After the program outputs the file names for each key word, it will run an additional and final child process to find files that strictly include
+        all the keywords within their descriptions.
