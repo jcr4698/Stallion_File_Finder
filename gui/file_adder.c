@@ -1,6 +1,8 @@
 #include <gtk/gtk.h>
 #include "add_file_gui.h"
 
+void load_css(void);
+
 static int counter = 0;
 struct gpointers {
     char* new_name;
@@ -51,6 +53,9 @@ int main(int argc, char* argv[]) {
     /* Initialize the GTK+ libraries */
     gtk_init(&argc, &argv);
 
+    /* Interface style */
+    load_css();
+
     /* Set up window properties */
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_default_size(GTK_WINDOW(window), 100, 100);
@@ -60,28 +65,35 @@ int main(int argc, char* argv[]) {
     g_signal_connect(window, "destroy", G_CALLBACK(destroy), NULL); // Exit button terminates window
 
     /* Set up new name fields */
-    new_name_label = gtk_label_new("New Name:");
+    new_name_label = gtk_label_new("New Name:   ");
+    gtk_widget_set_name(new_name_label, "label");
     new_name_field = gtk_entry_new();
+    gtk_widget_set_name(new_name_field, "field");
     gtk_entry_set_placeholder_text(GTK_ENTRY(new_name_field), "i.e. new_name.txt");
     gtk_grid_attach(GTK_GRID(grid), new_name_label, 0, 0, 1, 1);
     gtk_grid_attach(GTK_GRID(grid), new_name_field, 1, 0, 1, 1);
 
     /* Set up old name fields */
-    old_name_label = gtk_label_new("Old Name:");
+    old_name_label = gtk_label_new("Old Name:   ");
+    gtk_widget_set_name(old_name_label, "label");
     old_name_field = gtk_entry_new();
+    gtk_widget_set_name(old_name_field, "field");
     gtk_entry_set_placeholder_text(GTK_ENTRY(old_name_field), "i.e. old_name.txt ");
     gtk_grid_attach(GTK_GRID(grid), old_name_label, 0, 1, 1, 1);
     gtk_grid_attach(GTK_GRID(grid), old_name_field, 1, 1, 1, 1);
 
     /* Set up description fields */
-    desc_label = gtk_label_new("Description:");
+    desc_label = gtk_label_new("Description:    ");
+    gtk_widget_set_name(desc_label, "label");
     desc_field = gtk_entry_new();
+    gtk_widget_set_name(desc_field, "field");
     gtk_entry_set_placeholder_text(GTK_ENTRY(desc_field), "i.e. example description, jan, dec. 2022");
     gtk_grid_attach(GTK_GRID(grid), desc_label, 0, 2, 1, 1);
     gtk_grid_attach(GTK_GRID(grid), desc_field, 1, 2, 1, 1);
 
     /* Set up ADD button properties */
     add_button = gtk_button_new_with_label("Add File");    // Create button of name "Find"
+    gtk_widget_set_name(add_button, "black-button");
     struct gpointers* new_sym_link = malloc(3*sizeof(gpointer));
     new_sym_link->new_name = (gpointer) new_name_field;
     new_sym_link->old_name = (gpointer) old_name_field;
@@ -95,4 +107,19 @@ int main(int argc, char* argv[]) {
     gtk_widget_show_all(window);
     gtk_main();
     return 0;
+}
+
+void load_css(void) {
+    GtkCssProvider* provider;
+    GdkDisplay* display;
+    GdkScreen* screen;
+    const gchar* css_style_file = "gui/style_sheet.css";
+    GFile* css_fp = g_file_new_for_path(css_style_file);
+    GError* error = 0;
+    provider = gtk_css_provider_new();
+    display = gdk_display_get_default();
+    screen = gdk_display_get_default_screen(display);
+    gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+    gtk_css_provider_load_from_file( provider, css_fp, &error);
+    g_object_unref(provider);
 }
