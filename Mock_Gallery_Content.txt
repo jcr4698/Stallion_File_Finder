@@ -180,4 +180,4 @@ Ionspheric_Plasma_Charge.mov <- PlasmaNew.mov, Simulation, rotating cylinder, io
 
 Ionspheric_Plasma_Charge.desc <- plasmaCaption.png, Simulation, rotating cylinder, ionspheric plasma charge, density, Wendell Horton, Lee Leonard, UT Austin, Greg Foss, Anne Bowen, Greg Abram, Lola Shonaike, TACC
 
-hi.txt <- hello.txt, example file
+new_file.txt <- hello.txt, Example text, TACC

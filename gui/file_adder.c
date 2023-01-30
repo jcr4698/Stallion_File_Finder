@@ -1,6 +1,8 @@
 #include <gtk/gtk.h>
 #include "add_file_gui.h"
 
+#define DEFAULT "\033[0m"
+
 void load_css(void);
 
 static int counter = 0;
@@ -32,6 +34,7 @@ void find_for(GtkWidget* widget, struct gpointers* data) {
   
 void destroy(GtkWidget* widget, gpointer data) {
     gtk_main_quit();
+    printf("%s", DEFAULT);
 }
   
 int main(int argc, char* argv[]) {

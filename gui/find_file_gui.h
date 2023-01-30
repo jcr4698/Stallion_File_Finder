@@ -45,7 +45,10 @@ int search(int word_count, char* key_words, int char_count) {
     char *str, *token;
     int tok = 0;
 
-	/* Save for coincidences */
+	/* Storage for file names */
+	char** file_names; // INSTEAD: put items into a file and then print them into window!
+
+	/* Storage for coincidences */
 	char* awk_lookup = malloc((strlen(key_words) + (4 * word_count) + 1) * sizeof(char));
 	strcpy(awk_lookup, "");
 	char* awk_search = malloc(char_count * sizeof(char));

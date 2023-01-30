@@ -1,9 +1,16 @@
 #include <gtk/gtk.h>
 #include "find_file_gui.h"
 
+#define DEFAULT "\033[0m"
+
+/* Display variables */
+GtkWidget* files_found;
+GtkTextBuffer* tb;
+
 void load_css(void);
 
 void lookup(GtkWidget* widget, gpointer data) {
+
     const gchar *key_words = gtk_entry_get_text(GTK_ENTRY(data));
     
     /* Store variables */
@@ -24,9 +31,11 @@ void lookup(GtkWidget* widget, gpointer data) {
 
     /* Delete user entry to prepare next input */
     gtk_entry_set_text(GTK_ENTRY(data), "");
+	gtk_text_buffer_set_text(tb, "yay!", -1);
 }
 
 void destroy(GtkWidget* widget, gpointer data) {
+    printf("%s", DEFAULT);
     gtk_main_quit();
 }
 
@@ -38,7 +47,10 @@ int main(int argc, char* argv[]) {
     GtkWidget* key_words_label;
     GtkWidget* key_words_field;
     GtkWidget* space;
+    GtkWidget* space1;
     GtkWidget* find_button;
+    GtkWidget* scrollwin_found;
+    gchar *files_text = NULL;
 
     /* Initial message */
     g_print("Find a file by keywords:\n");
@@ -75,6 +87,30 @@ int main(int argc, char* argv[]) {
     gtk_widget_set_name(find_button, "black-button");
     g_signal_connect(G_OBJECT(find_button), "clicked", G_CALLBACK(lookup), key_words_field);  // Set up button
     gtk_grid_attach(GTK_GRID(grid), find_button, 2, 2, 2, 1); // Add button to grid
+
+    /* Add an empty space*/
+    space1 = gtk_label_new("");
+    gtk_grid_attach(GTK_GRID(grid), space1, 0, 3, 1, 1); // Add button to grid
+
+    /* Set up text area of files_found */
+    // scrolling bar (?)
+    scrollwin_found = gtk_scrolled_window_new(NULL, NULL);
+	gtk_container_set_border_width(GTK_CONTAINER(scrollwin_found), 6);
+	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin_found), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(scrollwin_found), GTK_SHADOW_IN);
+    // area to display files
+    files_found = gtk_text_view_new();
+    gtk_text_view_set_left_margin(GTK_TEXT_VIEW(files_found), 2);
+    gtk_text_view_set_right_margin(GTK_TEXT_VIEW(files_found), 2);
+    gtk_widget_show(files_found);
+    // connect scrolling bar to area
+    gtk_container_add(GTK_CONTAINER(scrollwin_found), files_found);
+    tb = gtk_text_view_get_buffer(GTK_TEXT_VIEW(files_found));
+    // put text in area
+	gtk_text_buffer_set_text(tb, "", -1);
+    gtk_text_view_set_editable(GTK_TEXT_VIEW(files_found), FALSE);
+    gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(files_found), FALSE);
+    gtk_grid_attach(GTK_GRID(grid), scrollwin_found, 0, 4, 6, 6);
 
     /* Display/Run window and its elements */
     gtk_grid_set_row_homogeneous(GTK_GRID(grid), FALSE);

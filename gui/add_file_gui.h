@@ -62,7 +62,7 @@ int add_file(char* new_name, char* old_name, char* desc) { // recreate the add_s
     if(!(prev_sym_links = sym_link_valid(gallery, pid, p1, old_name, file_size))
         && (old_exists = file_exists(old_name, COMMON_FOLDER))
         && !(new_exists = file_exists(new_name, CONTENTS_FOLDER))) {
-            FILE *file_ptr = fopen("../Mock_Gallery_Content.txt", "a");
+            FILE *file_ptr = fopen("./Mock_Gallery_Content.txt", "a");
             add_to_gallery(file_ptr, new_name, old_name, desc);
             fclose(file_ptr);
             if((old_name != NULL) && (strlen(old_name) > 0))
