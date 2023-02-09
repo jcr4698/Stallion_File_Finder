@@ -2,10 +2,13 @@
 #include "find_file_gui.h"
 
 #define DEFAULT "\033[0m"
+#define CACHE "./cache"
 
 /* Display variables */
 GtkWidget* files_found;
+GtkWidget* scrollwin_found;
 GtkTextBuffer* tb;
+FILE* cache_ptr;
 
 void load_css(void);
 
@@ -29,9 +32,18 @@ void lookup(GtkWidget* widget, gpointer data) {
     /* Print found key words */
     search(tok, (char*)key_words, char_count);
 
+    /* By now all found files should be in cache, use it! */
+    int files_size = get_file_size(cache_ptr, CACHE);
+    char* files_found = read_file(cache_ptr, CACHE, files_size);
+    files_found[files_size] = '\000';
+
+    /* resize if needed */
+    if(files_size > 131)
+        gtk_widget_set_size_request(scrollwin_found, 1400, 300);
+
     /* Delete user entry to prepare next input */
     gtk_entry_set_text(GTK_ENTRY(data), "");
-	gtk_text_buffer_set_text(tb, "yay!", -1);
+	gtk_text_buffer_set_text(tb, files_found, -1);
 }
 
 void destroy(GtkWidget* widget, gpointer data) {
@@ -49,7 +61,6 @@ int main(int argc, char* argv[]) {
     GtkWidget* space;
     GtkWidget* space1;
     GtkWidget* find_button;
-    GtkWidget* scrollwin_found;
     gchar *files_text = NULL;
 
     /* Initial message */
@@ -63,7 +74,7 @@ int main(int argc, char* argv[]) {
 
     /* Set up window properties */
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_default_size(GTK_WINDOW(window), 100, 100);
+    gtk_window_set_default_size(GTK_WINDOW(window), 150, 150);
     gtk_container_set_border_width(GTK_CONTAINER(window), 50);
     grid = gtk_grid_new();
     gtk_container_add(GTK_CONTAINER(window), grid);
@@ -92,25 +103,33 @@ int main(int argc, char* argv[]) {
     space1 = gtk_label_new("");
     gtk_grid_attach(GTK_GRID(grid), space1, 0, 3, 1, 1); // Add button to grid
 
-    /* Set up text area of files_found */
-    // scrolling bar (?)
+    /* Set up scrolling bar for files_found */
     scrollwin_found = gtk_scrolled_window_new(NULL, NULL);
 	gtk_container_set_border_width(GTK_CONTAINER(scrollwin_found), 6);
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin_found), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(scrollwin_found), GTK_SHADOW_IN);
-    // area to display files
+
+    /* Set up text area for files_found */
     files_found = gtk_text_view_new();
     gtk_text_view_set_left_margin(GTK_TEXT_VIEW(files_found), 2);
     gtk_text_view_set_right_margin(GTK_TEXT_VIEW(files_found), 2);
+    gtk_widget_set_hexpand(scrollwin_found, TRUE);
+    GdkColor black = {0, 0x0000, 0x0000, 0x0000};
+    GdkColor white = {0, 0xffff, 0xffff, 0xffff};
+    gtk_widget_modify_bg(GTK_WIDGET(files_found), GTK_STATE_NORMAL, &black);
+    gtk_widget_modify_fg(GTK_WIDGET(files_found), GTK_STATE_NORMAL, &white);
     gtk_widget_show(files_found);
-    // connect scrolling bar to area
+
+    /* Connect scrolling bar to text area */
     gtk_container_add(GTK_CONTAINER(scrollwin_found), files_found);
     tb = gtk_text_view_get_buffer(GTK_TEXT_VIEW(files_found));
-    // put text in area
+
+    /* Start text area for files_found */
 	gtk_text_buffer_set_text(tb, "", -1);
     gtk_text_view_set_editable(GTK_TEXT_VIEW(files_found), FALSE);
     gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(files_found), FALSE);
     gtk_grid_attach(GTK_GRID(grid), scrollwin_found, 0, 4, 6, 6);
+    gtk_widget_set_size_request(scrollwin_found, 150, 150);
 
     /* Display/Run window and its elements */
     gtk_grid_set_row_homogeneous(GTK_GRID(grid), FALSE);

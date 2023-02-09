@@ -9,6 +9,7 @@
 #define PIPE_READ 0
 #define PIPE_WRITE 1
 // #define GALLERY_NAME "Gallery_Content.txt"
+#define CACHE "./cache"
 #define GALLERY_NAME "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Stallion_File_Finder/Mock_Gallery_Content.txt"
 #define FORMAT_COLUMN 4
 #define CYAN "\033[0;36m"
@@ -17,6 +18,7 @@
 #define DEFAULT "\033[0m"
 
 FILE *gallery;
+FILE* cache_ptr;
 int p1[2];
 int p2[2];
 int p3[2];
@@ -45,8 +47,10 @@ int search(int word_count, char* key_words, int char_count) {
     char *str, *token;
     int tok = 0;
 
-	/* Storage for file names */
-	char** file_names; // INSTEAD: put items into a file and then print them into window!
+	/* Open cache file */
+	cache_ptr = fopen(CACHE, "w+");
+	if(cache_ptr == NULL)
+		printf("Cache Error: cache file in find_file_gui.h: Line 52 did not open!");
 
 	/* Storage for coincidences */
 	char* awk_lookup = malloc((strlen(key_words) + (4 * word_count) + 1) * sizeof(char));
@@ -87,6 +91,9 @@ int search(int word_count, char* key_words, int char_count) {
 		search_file_coincidences(awk_search);
 	}
 
+	/* close cache file */
+	fclose(cache_ptr);
+
 	/* Deallocate memory */
 	free(token);
 	free(awk_lookup);
@@ -116,6 +123,7 @@ _Bool search_file_for(char* key_word) {
 
 		change_text_color(CYAN);
 		printf("\n\"%s\":\n", key_word);	// print word we're trying to find
+		fprintf(cache_ptr, "\n\"%s\":\n", key_word);
 		change_text_color(DEFAULT);
 
 		file_size = get_file_size(gallery, GALLERY_NAME);
@@ -148,6 +156,7 @@ _Bool search_file_for(char* key_word) {
 		if(line_count == 0)
 			change_text_color(RED);
 		printf("--> %d file(s) found w/ key \"%s\"\n", line_count, key_word);	// print file count found
+		fprintf(cache_ptr, "--> %d file(s) found w/ key \"%s\"\n", line_count, key_word);
 		change_text_color(DEFAULT);
 	}
 
@@ -221,6 +230,7 @@ void search_file_coincidences(char* awk_search) {
 			}
 			change_text_color(GREEN);
 			printf("--> %d file(s) found w/ key \"%s\"\n", line_count, awk_search);	// print file count found
+			fprintf(cache_ptr, "--> %d file(s) found w/ key \"%s\"\n", line_count, awk_search);
 			change_text_color(DEFAULT);
 		}
 	}
@@ -229,6 +239,17 @@ void search_file_coincidences(char* awk_search) {
     close(p1[PIPE_WRITE]);
 
 	waitpid(pid, NULL, 0);
+}
+
+/* Open the file FILE_NAME and read it's contents into new_buff */
+char* read_file(FILE* file_ptr, char* file_name, int file_size) {
+    char* new_buff;
+    new_buff = malloc((file_size + 1) * sizeof(char));
+    file_ptr = fopen(file_name, "rw");
+    fseek(file_ptr, 0, SEEK_SET);
+    fread(new_buff, file_size, 1, file_ptr); // read contents of file
+    fclose(file_ptr);
+    return new_buff;
 }
 
 /* Open the file FILE_NAME and store into file_ptr,
@@ -251,6 +272,7 @@ void awk_format_print(char* awk_lookup, char* awk_search) {
 	change_text_color(CYAN);
 	printf("%s", awk_lookup);
 	printf(":\n");
+	fprintf(cache_ptr, "\n%s:\n", awk_lookup); // save to cache
 	change_text_color(DEFAULT);
 }
 
@@ -266,16 +288,21 @@ void format_print(char* buff, int size, int line_amt) {
 		if(buff[c] == '<') {
 			file_name[file_length - 1] = '\000';
 			printf("%-35s ", file_name);
-			if((curr_line + 1) % FORMAT_COLUMN == 0)
+			fprintf(cache_ptr, "%-50s", file_name);	// save to cache
+			if((curr_line + 1) % FORMAT_COLUMN == 0) {
 				printf("\n");
+				fprintf(cache_ptr, "\n");	// save to cache
+			}
 			curr_line++;
 			file_length = 0;
 		}
 		else if(buff[c] == '\n' || file_length == 100)
 			file_length = 0;
 	}
-	if((curr_line % FORMAT_COLUMN) != 0)
+	if((curr_line % FORMAT_COLUMN) != 0) {
 		printf("\n");
+		fprintf(cache_ptr, "\n");	// save to cache
+	}
 }
 
 /* change text color to COLOR, don't forget
