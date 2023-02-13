@@ -8,7 +8,7 @@
 
 #define PIPE_READ 0
 #define PIPE_WRITE 1
-// #define GALLERY_NAME "Gallery_Content.txt"
+// #define GALLERY_NAME "/home/vislab/Gallery/Content/Gallery_Content.txt"
 #define CACHE "./cache"
 #define GALLERY_NAME "/mnt/c/Users/jan/Desktop/Files/Work_Material/Employment/Visualizations_Lab/Display_Cluster/Stallion_File_Finder/Mock_Gallery_Content.txt"
 #define FORMAT_COLUMN 4
