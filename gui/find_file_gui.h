@@ -50,7 +50,7 @@ int search(int word_count, char* key_words, int char_count) {
 	/* Open cache file */
 	cache_ptr = fopen(CACHE, "w+");
 	if(cache_ptr == NULL)
-		printf("Cache Error: cache file in find_file_gui.h: Line 52 did not open!");
+		printf("Cache Error: cache file in find_file_gui.h - Line 51 could not open!");
 
 	/* Storage for coincidences */
 	char* awk_lookup = malloc((strlen(key_words) + (4 * word_count) + 1) * sizeof(char));

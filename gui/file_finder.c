@@ -32,7 +32,7 @@ void lookup(GtkWidget* widget, gpointer data) {
     /* Print found key words */
     search(tok, (char*)key_words, char_count);
 
-    /* By now all found files should be in cache, use it! */
+    /* Using found files should be in cache, display them on screen */
     int files_size = get_file_size(cache_ptr, CACHE);
     char* files_found = read_file(cache_ptr, CACHE, files_size);
     files_found[files_size] = '\000';
@@ -43,6 +43,8 @@ void lookup(GtkWidget* widget, gpointer data) {
 
     /* Delete user entry to prepare next input */
     gtk_entry_set_text(GTK_ENTRY(data), "");
+
+    /* Display Text */
 	gtk_text_buffer_set_text(tb, files_found, -1);
 }
 
@@ -91,7 +93,7 @@ int main(int argc, char* argv[]) {
 
     /* Add an empty space*/
     space = gtk_label_new("");
-    gtk_grid_attach(GTK_GRID(grid), space, 1, 1, 1, 1); // Add button to grid
+    gtk_grid_attach(GTK_GRID(grid), space, 1, 1, 1, 1); // Add space to grid
 
     /* Set up ADD button properties */
     find_button = gtk_button_new_with_label("Find File");    // Create button of name "Find"

@@ -14,6 +14,7 @@ int get_c_idx(int file_size, int c, int* find_mode);
 void reset_gallery_add(FILE* file_ptr);
 
 FILE *gallery;
+FILE* cache_ptr;
 char* buff;
 int file_size;
 int p1[2];
@@ -37,15 +38,15 @@ int add_file(char* new_name, char* old_name, char* desc) { // recreate the add_s
     /* Check whether inputs are valid*/
     if((new_name != NULL) && (strlen(strtrim(new_name)) < 1)) {
         printf("ERROR: incorrect format. one or more fields is empty/missing.\n");
-        return -1;  // empty string
+        return -7;  // empty string
     }
     if((old_name != NULL) && (strlen(strtrim(old_name)) < 1)) {
         printf("ERROR: incorrect format. one or more fields is empty/missing.\n");
-        return -1;  // empty string
+        return -7;  // empty string
     }
     if((desc != NULL) && (strlen(strtrim(desc)) < 1)) {
         printf("ERROR: incorrect format. one or more fields is empty/missing.\n");
-        return -1;  // empty string
+        return -7;  // empty string
     }
     if(strstr(old_name, ".") == NULL) {
 
@@ -55,7 +56,7 @@ int add_file(char* new_name, char* old_name, char* desc) { // recreate the add_s
         change_text_color(DEFAULT);
 
         // return error
-        return -1;  // wrong string
+        return -8;  // wrong string
     }
 
     /* Make symbolic link and add it to content */
